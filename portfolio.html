@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Portfolio</title>
+    <style>
+      @font-face {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        src: url('./fonts/raleway-v28-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+        src: local(''),
+          url('./fonts/raleway-v28-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'),
+          /*
+    IE6-IE8 */ url('./fonts/raleway-v28-latin_cyrillic-700.woff2') format('woff2'),
+          /* Super Modern
+    Browsers */ url('./fonts/raleway-v28-latin_cyrillic-700.woff')
+            format('woff'),
+          /* Modern
+    Browsers */ url('./fonts/raleway-v28-latin_cyrillic-700.ttf')
+            format('truetype'),
+          /* Safari,
+    Android, iOS */ url('./fonts/raleway-v28-latin_cyrillic-700.svg#Raleway')
+            format('svg'); /*
+    Legacy iOS */
+      } /* roboto-regular - latin_cyrillic */
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: url('./fonts/roboto-v30-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+        src: local(''),
+          url('./fonts/roboto-v30-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+          /*
+    IE6-IE8 */ url('./fonts/roboto-v30-latin_cyrillic-regular.woff2') format('woff2'),
+          /* Super
+    Modern Browsers */ url('./fonts/roboto-v30-latin_cyrillic-regular.woff')
+            format('woff'),
+          /*
+    Modern Browsers */ url('./fonts/roboto-v30-latin_cyrillic-regular.ttf')
+            format('truetype'),
+          /* Safari, Android, iOS */ url('./fonts/roboto-v30-latin_cyrillic-regular.svg#Roboto')
+            format('svg'); /* Legacy iOS */
+      } /* roboto-500 - latin_cyrillic */
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        src: url('./fonts/roboto-v30-latin_cyrillic-500.eot'); /* IE9 Compat Modes */
+        src: local(''),
+          url('./fonts/roboto-v30-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'),
+          /*
+    IE6-IE8 */ url('./fonts/roboto-v30-latin_cyrillic-500.woff2') format('woff2'),
+          /* Super
+    Modern Browsers */ url('./fonts/roboto-v30-latin_cyrillic-500.woff')
+            format('woff'),
+          /*
+    Modern Browsers */ url('./fonts/roboto-v30-latin_cyrillic-500.ttf')
+            format('truetype'),
+          /*
+    Safari, Android, iOS */ url('./fonts/roboto-v30-latin_cyrillic-500.svg#Roboto')
+            format('svg'); /* Legacy iOS */
+      } /* roboto-700 - latin_cyrillic */
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        src: url('./fonts/roboto-v30-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+        src: local(''),
+          url('./fonts/roboto-v30-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'),
+          /*
+    IE6-IE8 */ url('./fonts/roboto-v30-latin_cyrillic-700.woff2') format('woff2'),
+          /* Super
+    Modern Browsers */ url('./fonts/roboto-v30-latin_cyrillic-700.woff')
+            format('woff'),
+          /*
+    Modern Browsers */ url('./fonts/roboto-v30-latin_cyrillic-700.ttf')
+            format('truetype'),
+          /*
+    Safari, Android, iOS */ url('./fonts/roboto-v30-latin_cyrillic-700.svg#Roboto')
+            format('svg'); /* Legacy iOS */
+      } /* roboto-900 - latin_cyrillic */
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 900;
+        src: url('./fonts/roboto-v30-latin_cyrillic-900.eot'); /* IE9 Compat Modes */
+        src: local(''),
+          url('./fonts/roboto-v30-latin_cyrillic-900.eot?#iefix') format('embedded-opentype'),
+          /*
+    IE6-IE8 */ url('./fonts/roboto-v30-latin_cyrillic-900.woff2') format('woff2'),
+          /* Super
+    Modern Browsers */ url('./fonts/roboto-v30-latin_cyrillic-900.woff')
+            format('woff'),
+          /*
+    Modern Browsers */ url('./fonts/roboto-v30-latin_cyrillic-900.ttf')
+            format('truetype'),
+          /*
+    Safari, Android, iOS */ url('./fonts/roboto-v30-latin_cyrillic-900.svg#Roboto')
+            format('svg'); /* Legacy iOS */
+      }
+    </style>
+  </head>
+  <body>
+    <!--Шапка-->
+    <header class="header">
+      <div class="container">
+        <div class="navigation__flex">
+          <a href="./index.html" class="logo-link link"
+            ><span class="logo-link__web">Web</span
+            ><span class="logo-link__studio_black">Studio</span></a
+          >
+          <nav>
+            <ul class="navigation-list list">
+              <li>
+                <a href="./index.html" class="navigation-list__link link" target="_self">Студія</a>
+              </li>
+              <li>
+                <a
+                  href="./portfolio.html"
+                  class="navigation-list__link link navigation-list__link_current"
+                  target="_self"
+                  >Портфоліо</a
+                >
+              </li>
+              <li><a href="" class="navigation-list__link link">Контакти</a></li>
+            </ul>
+          </nav>
+          <ul class="navigation-contacts-list list">
+            <li>
+              <a href="mailto:info@devstudio.com" class="navigation-contacts-list__link link"
+                ><svg
+                  width="16"
+                  height="12"
+                  class="navigation-contacts-list__icon--envelope navigation-contacts-list__icon--envelope--start"
+                >
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a href="tel:+380961111111" class="navigation-contacts-list__link link"
+                ><svg
+                  width="10"
+                  height="16"
+                  class="navigation-contacts-list__icon--smartphone navigation-contacts-list__icon--smartphone--start"
+                >
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!--Основа-->
+    <main>
+      <!--Фільтри-->
+      <section class="section">
+        <div class="container">
+          <h1 class="invisible">Знову невидимий заголовок</h1>
+          <ul class="filter-btn__list list">
+            <li class="filter-btn__list-item">
+              <button type="button" class="filter-btn__list-btn">Усі</button>
+            </li>
+            <li class="filter-btn__list-item">
+              <button type="button" class="filter-btn__list-btn">Веб-сайти</button>
+            </li>
+            <li class="filter-btn__list-item">
+              <button type="button" class="filter-btn__list-btn">Додатки</button>
+            </li>
+            <li class="filter-btn__list-item">
+              <button type="button" class="filter-btn__list-btn">Дизайн</button>
+            </li>
+            <li class="filter-btn__list-item">
+              <button type="button" class="filter-btn__list-btn">Маркетинг</button>
+            </li>
+          </ul>
+          <!--Портфоліо-->
+          <ul class="portf-list list">
+            <li class="portf-list__item">
+              <a href="#" class="portf-list__link link">
+                <div class="portf-list__div-overlay">
+                  <img
+                    src="./images/img-p01.jpg"
+                    width="370"
+                    height="294"
+                    alt="Ноутбук"
+                    class="img"
+                  />
+                  <p class="portf-list__div-p">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу.
+                  </p>
+                </div>
+                <div class="portf-list__box">
+                  <h2 class="portf-list__box-h">Технокряк</h2>
+                  <p class="portf-list__box-p">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="portf-list__item">
+              <a href="#" class="portf-list__link link">
+                <div class="portf-list__div-overlay">
+                  <img
+                    src="./images/img-p02.jpg"
+                    width="370"
+                    height="294"
+                    alt="Баскетбол"
+                    class="img"
+                  />
+                  <p class="portf-list__div-p">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу.
+                  </p>
+                </div>
+                <div class="portf-list__box">
+                  <h2 class="portf-list__box-h">Постер New Orlean vs Golden Star</h2>
+                  <p class="portf-list__box-p">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="portf-list__item">
+              <a href="#" class="portf-list__link link">
+                <div class="portf-list__div-overlay">
+                  <img
+                    src="./images/img-p03.jpg"
+                    width="370"
+                    height="294"
+                    alt="Акула"
+                    class="img"
+                  />
+                  <p class="portf-list__div-p">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу.
+                  </p>
+                </div>
+                <div class="portf-list__box">
+                  <h2 class="portf-list__box-h">Ресторан Seafood</h2>
+                  <p class="portf-list__box-p">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="portf-list__item">
+              <a href="#" class="portf-list__link link">
+                <div class="portf-list__div-overlay">
+                  <img
+                    src="./images/img-p04.jpg"
+                    width="370"
+                    height="294"
+                    alt="Навушники"
+                    class="img"
+                  />
+                  <p class="portf-list__div-p">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу.
+                  </p>
+                </div>
+                <div class="portf-list__box">
+                  <h2 class="portf-list__box-h">Проєкт Prime</h2>
+                  <p class="portf-list__box-p">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="portf-list__item">
+              <a href="#" class="portf-list__link link">
+                <div class="portf-list__div-overlay">
+                  <img
+                    src="./images/img-p05.jpg"
+                    width="370"
+                    height="294"
+                    alt="Коробки"
+                    class="img"
+                  />
+                  <p class="portf-list__div-p">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу.
+                  </p>
+                </div>
+                <div class="portf-list__box">
+                  <h2 class="portf-list__box-h">Проєкт Boxes</h2>
+                  <p class="portf-list__box-p">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="portf-list__item">
+              <a href="#" class="portf-list__link link">
+                <div class="portf-list__div-overlay">
+                  <img
+                    src="./images/img-p06.jpg"
+                    width="370"
+                    height="294"
+                    alt="Монітор"
+                    class="img"
+                  />
+                  <p class="portf-list__div-p">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу.
+                  </p>
+                </div>
+                <div class="portf-list__box">
+                  <h2 class="portf-list__box-h">Inspiration has no Borders</h2>
+                  <p class="portf-list__box-p">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="portf-list__item">
+              <a href="#" class="portf-list__link link">
+                <div class="portf-list__div-overlay">
+                  <img
+                    src="./images/img-p07.jpg"
+                    width="370"
+                    height="294"
+                    alt="Книга"
+                    class="img"
+                  />
+                  <p class="portf-list__div-p">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу.
+                  </p>
+                </div>
+                <div class="portf-list__box">
+                  <h2 class="portf-list__box-h">Видання Limited Edition</h2>
+                  <p class="portf-list__box-p">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="portf-list__item">
+              <a href="#" class="portf-list__link link">
+                <div class="portf-list__div-overlay">
+                  <img
+                    src="./images/img-p08.jpg"
+                    width="370"
+                    height="294"
+                    alt="Проєкт LAB"
+                    class="img"
+                  />
+                  <p class="portf-list__div-p">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу.
+                  </p>
+                </div>
+                <div class="portf-list__box">
+                  <h2 class="portf-list__box-h">Маркетинг</h2>
+                  <p class="portf-list__box-p">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="portf-list__item">
+              <a href="#" class="portf-list__link link">
+                <div class="portf-list__div-overlay">
+                  <img
+                    src="./images/img-p09.jpg"
+                    width="370"
+                    height="294"
+                    alt="Growing Business"
+                    class="img"
+                  />
+                  <p class="portf-list__div-p">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу.
+                  </p>
+                </div>
+                <div class="portf-list__box">
+                  <h2 class="portf-list__box-h">Growing Business</h2>
+                  <p class="portf-list__box-p">Додаток</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!--Футер-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__flex-div">
+          <div class="footer-address__div">
+            <a href="./index.html" class="logo-link logo-link__footer_mb28 link"
+              ><span class="logo-link__web">Web</span
+              ><span class="logo-link__studio_white">Studio</span></a
+            >
+            <address>
+              <ul class="footer-address-list list">
+                <li class="footer-address-list__item">
+                  <a
+                    href="https://goo.gl/maps/zmiDJwTHFCENLTo26"
+                    target="_blank"
+                    class="footer__address link"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="footer-address-list__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="navigation-contacts-list__link--footer link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="footer-address-list__item">
+                  <a href="tel:+380961111111" class="navigation-contacts-list__link--footer link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-social__div">
+            <p class="footer-social__p"><b>Приєднуйтесь</b></p>
+            <ul class="footer-social__list list">
+              <li class="footer-social-list__items">
+                <a href="#" class="footer-social__link link"
+                  ><svg width="20" height="20" class="footer-social__icons">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-list__items">
+                <a href="#" class="footer-social__link link"
+                  ><svg width="20" height="20" class="footer-social__icons">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-list__items">
+                <a href="#" class="footer-social__link link"
+                  ><svg width="20" height="20" class="footer-social__icons">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-list__items">
+                <a href="#" class="footer-social__link link"
+                  ><svg width="20" height="20" class="footer-social__icons">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-subscribe__div">
+            <p class="footer-subscribe__p"><b>Підпишіться на розсилку</b></p>
+            <form class="footer-subscribe__form">
+              <label>
+                <input
+                  class="footer-subscribe__email"
+                  type="email"
+                  name="mail"
+                  placeholder="E-mail"
+                />
+              </label>
+              <button type="submit" class="footer-subscribe__btn btn__all">
+                Підписатися
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
