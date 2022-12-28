@@ -125,7 +125,66 @@
             ><span class="logo-link__web">Web</span
             ><span class="logo-link__studio_black">Studio</span></a
           >
-          
+          <button
+            type="button"
+            class="mobile-menu__button__open js-open-menu"
+            aria-label="Перемикач мобільного меню"
+            aria-expanded="false"
+          >
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#icon-menu_40px"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu js-menu-container">
+            <button
+              type="button"
+              class="mobile-menu__button__close js-close-menu"
+              aria-label="Кнопка закриття мобільного меню"
+            >
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#icon-close_40px"></use>
+              </svg>
+            </button>
+            <div class="mobile-menu__div-flex">
+              <ul class="mobile-menu__navigation-list list">
+                <li class="mobile-menu__navigation-list-item">
+                  <a
+                    href="./index.html"
+                    class="mobile-menu__navigation-list__link link"
+                    target="_self"
+                    >Студія</a
+                  >
+                </li>
+                <li class="mobile-menu__navigation-list-item">
+                  <a
+                    href="./portfolio.html"
+                    class="mobile-menu__navigation-list__link link"
+                    target="_self"
+                    >Портфоліо</a
+                  >
+                </li class="mobile-menu__navigation-list-item">
+                <li><a href="" class="mobile-menu__navigation-list__link link">Контакти</a></li>
+              </ul>
+              <ul class="mobile-menu__contacts-list list">
+                <li class="mobile-menu__contacts-list-item">
+                  <a href="tel:+380961111111" class="mobile-menu__contacts-link__tel link">
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mobile-menu__contacts-list-item">
+                  <a href="mailto:info@devstudio.com" class="mobile-menu__contacts-link__mail link">
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mobile-menu__social list">
+                <li><a class="mobile-menu__social-link link" href="">Instagram</a></li>
+                <li><a class="mobile-menu__social-link link" href="">Facebook</a></li>
+                <li><a class="mobile-menu__social-link link" href="">Twitter</a></li>
+                <li><a class="mobile-menu__social-link link" href="">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
           <nav>
             <ul class="navigation-list list">
               <li>
@@ -689,5 +748,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

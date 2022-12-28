@@ -15,6 +15,25 @@
   .logo-link {
     font-size: 24px;
   }
+  .navigation__flex {
+    justify-content: space-between;
+  }
+  nav {
+    display: none;
+  }
+  .mobile-menu__button__open,
+  .mobile-menu__button__close {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    &:hover,
+    &:focus {
+      fill: getColor('main-accent-color');
+    }
+  }
+
   .navigation-list {
     display: none;
     margin-left: 0;
