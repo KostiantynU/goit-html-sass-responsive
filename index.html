@@ -130,12 +130,13 @@
             class="mobile-menu__button__open js-open-menu"
             aria-label="Перемикач мобільного меню"
             aria-expanded="false"
+            aria-controls="mobile-menu"
           >
             <svg width="40" height="40">
               <use href="./images/icons.svg#icon-menu_40px"></use>
             </svg>
           </button>
-          <div class="mobile-menu js-menu-container">
+          <div class="mobile-menu js-menu-container" id="mobile-menu">
             <button
               type="button"
               class="mobile-menu__button__close js-close-menu"
@@ -145,7 +146,7 @@
                 <use href="./images/icons.svg#icon-close_40px"></use>
               </svg>
             </button>
-            <div class="mobile-menu__div-flex">
+            <div class="mobile-menu__div">
               <ul class="mobile-menu__navigation-list list">
                 <li class="mobile-menu__navigation-list-item">
                   <a
@@ -162,8 +163,10 @@
                     target="_self"
                     >Портфоліо</a
                   >
-                </li class="mobile-menu__navigation-list-item">
-                <li><a href="" class="mobile-menu__navigation-list__link link">Контакти</a></li>
+                </li>
+                <li class="mobile-menu__navigation-list-item">
+                  <a href="" class="mobile-menu__navigation-list__link link">Контакти</a>
+                </li>
               </ul>
               <ul class="mobile-menu__contacts-list list">
                 <li class="mobile-menu__contacts-list-item">
@@ -177,11 +180,19 @@
                   >
                 </li>
               </ul>
-              <ul class="mobile-menu__social list">
-                <li><a class="mobile-menu__social-link link" href="">Instagram</a></li>
-                <li><a class="mobile-menu__social-link link" href="">Facebook</a></li>
-                <li><a class="mobile-menu__social-link link" href="">Twitter</a></li>
-                <li><a class="mobile-menu__social-link link" href="">LinkedIn</a></li>
+              <ul class="mobile-menu__social-list list">
+                <li class="mobile-menu__social-item">
+                  <a class="mobile-menu__social-link link" href="">Instagram</a>
+                </li>
+                <li class="mobile-menu__social-item">
+                  <a class="mobile-menu__social-link link" href="">Facebook</a>
+                </li>
+                <li class="mobile-menu__social-item">
+                  <a class="mobile-menu__social-link link" href="">Twitter</a>
+                </li>
+                <li class="mobile-menu__social-item">
+                  <a class="mobile-menu__social-link link" href="">LinkedIn</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -344,18 +355,15 @@
           <ul class="team-list list">
             <li class="team-list__item">
               <img
-                src="./images/our-team-01.jpg"
+                src="./images/our-team-01-810.jpg"
+                srcset="
+                  ./images/our-team-01-mobile-450.jpg    450w,
+                  ./images/our-team-01-mobile-x2-900.jpg 354w,
+                  ./images/our-team-01-810.jpg           270w
+                "
+                sizes="(min-width: 1200px) 270W, (min-width: 768px) 354w, (min-width: 450px) 450w, 100vw"
                 alt="Ігор Дем'яненко"
-                width="270"
-                height="260"
-                class="img img-team-origin"
-              />
-              <img
-                src="./images/our-team-01-mobile.jpg"
-                alt="Ігор Дем'яненко"
-                width="450"
-                height="460"
-                class="img-team-mobile"
+                class="img"
               />
               <div class="team-list-box">
                 <h3 class="team-list-box__h">Ігор Дем'яненко</h3>
@@ -394,18 +402,15 @@
             </li>
             <li class="team-list__item">
               <img
-                src="./images/our-team-02.jpg"
+                src="./images/our-team-02-810.jpg"
+                srcset="
+                  ./images/our-team-02-mobile-450.jpg    450w,
+                  ./images/our-team-02-mobile-x2-900.jpg 354w,
+                  ./images/our-team-02-810.jpg           270w
+                "
+                sizes="(min-width: 1200px) 270W, (min-width: 768px) 354w, (min-width: 480px) 450w, 100vw"
                 alt="Ольга Рєпіна"
-                width="270"
-                height="260"
-                class="img img-team-origin"
-              />
-              <img
-                src="./images/our-team-02-mobile.jpg"
-                alt="Ігор Дем'яненко"
-                width="450"
-                height="460"
-                class="img-team-mobile"
+                class="img"
               />
               <div class="team-list-box">
                 <h3 class="team-list-box__h">Ольга Рєпіна</h3>
@@ -445,19 +450,17 @@
             </li>
             <li class="team-list__item">
               <img
-                src="./images/our-team-03.jpg"
+                src="./images/our-team-03-810.jpg"
+                srcset="
+                  ./images/our-team-03-mobile-450.jpg    450w,
+                  ./images/our-team-03-mobile-x2-900.jpg 354w,
+                  ./images/our-team-03-810.jpg           270w
+                "
+                sizes="(min-width: 1200px) 270W, (min-width: 768px) 354w, (min-width: 480px) 450w, 100vw"
                 alt="Микола Тарасов"
-                width="270"
-                height="260"
-                class="img img-team-origin"
+                class="img"
               />
-              <img
-                src="./images/our-team-03-mobile.jpg"
-                alt="Ігор Дем'яненко"
-                width="450"
-                height="460"
-                class="img-team-mobile"
-              />
+
               <div class="team-list-box">
                 <h3 class="team-list-box__h">Микола Тарасов</h3>
                 <p class="team-list-box__p">Marketing</p>
@@ -496,18 +499,15 @@
             </li>
             <li class="team-list__item">
               <img
-                src="./images/our-team-04.jpg"
+                src="./images/our-team-04-810.jpg"
+                srcset="
+                  ./images/our-team-04-mobile-450.jpg    450w,
+                  ./images/our-team-04-mobile-x2-900.jpg 354w,
+                  ./images/our-team-04-810.jpg           270w
+                "
+                sizes="(min-width: 1200px) 270W, (min-width: 768px) 354w, (min-width: 480px) 450w, 100vw"
                 alt="Михайло Єрмаков"
-                width="270"
-                height="260"
-                class="img img-team-origin"
-              />
-              <img
-                src="./images/our-team-04-mobile.jpg"
-                alt="Ігор Дем'яненко"
-                width="450"
-                height="460"
-                class="img-team-mobile"
+                class="img"
               />
               <div class="team-list-box">
                 <h3 class="team-list-box__h">Михайло Єрмаков</h3>
@@ -731,16 +731,18 @@
             <label class="modal-form__field-label--check" for="subscribe">
               <input
                 class="modal-form__field-checkbox"
-                type="checkbox"
+                type="check8ox"
                 name="subscribe"
                 id="subscribe"
               />
-              <svg width="16" height="15" class="modal-form__field-checkbox--checked">
+              <svg width="16" he8ght="18" class="modal-form__field-checkbox--checked">
                 <use href="./images/icons.svg#icon-check"></use>
               </svg>
-              <span class="modal-form__field-checkbox--icon"></span>Погоджуюся з розсилкою та
-              приймаю
-              <a href="#" class="modal-form__field-checkbox--link"> Умови договору</a></label
+              <span class="modal-form__field-checkbox--icon"></span
+              ><span class="modal-form__field-checkbox--text"
+                >Погоджуюся з розсилкою та приймаю
+                <a href="#" class="modal-form__field-checkbox--link"> Умови договору</a></span
+              ></label
             >
           </div>
           <button type="submit" class="btn__all modal-form__field-checkbox--btn">Відправити</button>

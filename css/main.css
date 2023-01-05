@@ -96,7 +96,6 @@ h5 {
   background-color: #188ce8;
 }
 
-/* Logo styles */
 .logo-link {
   display: inline-block;
   font-family: "RaleWay", sans-serif;
@@ -191,11 +190,13 @@ h5 {
 .navigation-contacts-list__link:hover, .navigation-contacts-list__link:focus {
   color: #2196f3;
 }
-.navigation-contacts-list__link:hover > .navigation-contacts-list__icon--envelope, .navigation-contacts-list__link:focus > .navigation-contacts-list__icon--smartphone {
+.navigation-contacts-list__link:hover > .navigation-contacts-list__icon--envelope, .navigation-contacts-list__link:hover > .navigation-contacts-list__icon--smartphone, .navigation-contacts-list__link:focus > .navigation-contacts-list__icon--envelope, .navigation-contacts-list__link:focus > .navigation-contacts-list__icon--smartphone {
   fill: currentColor;
 }
-.navigation-contacts-list__link:focus > .navigation-contacts-list__icon--envelope, .navigation-contacts-list__link:hover > .navigation-contacts-list__icon--smartphone {
-  fill: currentColor;
+
+.navigation-contacts-list__icon--envelope,
+.navigation-contacts-list__icon--smartphone {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .navigation-contacts-list__icon--envelope--start,
@@ -542,7 +543,6 @@ h5 {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -561,6 +561,7 @@ h5 {
   top: 50%;
   padding: 40px;
   transform: translate(-50%, -50%);
+  overflow-y: auto;
   background-color: #ffffff;
 }
 
@@ -663,14 +664,7 @@ h5 {
   align-items: center;
   justify-content: center;
   position: relative;
-  font-size: 14px;
-  line-height: 1.71;
   color: #757575;
-}
-.modal-form__field-label--check:hover, .modal-form__field-label--check:focus {
-  text-decoration: underline;
-  -webkit-text-decoration-color: #2196f3;
-          text-decoration-color: #2196f3;
 }
 
 .modal-form__field-checkbox {
@@ -721,8 +715,23 @@ h5 {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-form__field-checkbox--text {
+  line-height: 1.71;
+}
+
 .modal-form__field-checkbox--link {
+  position: relative;
+  text-decoration: none;
   color: #2196f3;
+}
+.modal-form__field-checkbox--link::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #2196f3;
 }
 
 .modal-form__field-checkbox--btn {
@@ -840,11 +849,13 @@ h5 {
   display: none;
   position: absolute;
   padding: 48px 40px;
-  background-color: #ffffff;
   top: 0;
-  right: 0;
+  left: 0;
+  overflow-y: scroll;
+  background-color: #ffffff;
   width: 100%;
   height: 796px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
 
 .mobile-menu__button__open,
@@ -854,17 +865,18 @@ h5 {
 
 .mobile-menu__button__close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 15px;
+}
+.mobile-menu__button__close:hover, .mobile-menu__button__close:focus {
+  color: #2196f3;
 }
 
 .mobile-menu.is-open {
   display: block;
 }
 
-.mobile-menu__div-flex {
-  display: flex;
-  flex-direction: column;
+.mobile-menu__div {
   height: 100%;
 }
 
@@ -876,12 +888,44 @@ h5 {
   margin-bottom: 32px;
 }
 
-.mobile-menu__navigation-list-item:nth .mobile-menu__navigation-list > li:not-last-child .mobile-menu__contacts-list {
+.mobile-menu__navigation-list-item:last-child() {
+  margin-bottom: 0;
+}
+
+.mobile-menu__contacts-list {
   margin-bottom: 64px;
 }
 
-.mobile-menu__social {
+.mobile-menu__contacts-list-item {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__contacts-list-item:last-child() {
+  margin-bottom: 0;
+}
+
+.mobile-menu__social-list {
   display: flex;
+}
+
+.mobile-menu__social-link {
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.mobile-menu__social-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-menu__social-item:last-child > .mobile-menu__social-link::after {
+  display: none;
 }
 
 .mobile-menu__navigation-list__link {
@@ -922,16 +966,10 @@ h5 {
 @media screen and (max-width: 480px) {
   .container {
     width: 480px;
-    outline: 1px solid black;
   }
   .section {
     padding-top: 60px;
     padding-bottom: 60px;
-  }
-  .header {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 15px;
   }
   .logo-link {
     font-size: 24px;
@@ -942,17 +980,24 @@ h5 {
   nav {
     display: none;
   }
-  .mobile-menu__button__open,
-.mobile-menu__button__close {
+  .mobile-menu__button__open {
     display: inline-flex;
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
   }
-  .mobile-menu__button__open:hover, .mobile-menu__button__open:focus,
-.mobile-menu__button__close:hover,
-.mobile-menu__button__close:focus {
+  .mobile-menu__button__open:hover, .mobile-menu__button__open:focus {
+    fill: #2196f3;
+  }
+  .mobile-menu.is-open .mobile-menu__button__close {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  .mobile-menu.is-open .mobile-menu__button__close:hover, .mobile-menu.is-open .mobile-menu__button__close:focus {
     fill: #2196f3;
   }
   .navigation-list {
@@ -1049,19 +1094,14 @@ h5 {
     height: 100%;
   }
   .footer__flex-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
   }
   .footer-address__div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
   .footer-address-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    text-align: center;
     margin-bottom: 60px;
   }
   .footer-address-list__item:not(:last-child) {
@@ -1075,9 +1115,7 @@ h5 {
     align-items: center;
   }
   .footer-subscribe__div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
   .footer-subscribe__form {
     display: flex;
@@ -1089,5 +1127,25 @@ h5 {
     height: 50px;
     padding: 15px;
     margin-bottom: 20px;
+  }
+  .backdrop {
+    overflow-x: scroll;
+  }
+  .modal {
+    position: absolute;
+    width: 450px;
+    height: 609px;
+    padding: 40px;
+  }
+  .modal__p {
+    line-height: 1.5;
+  }
+  .modal-form__field-checkbox--text,
+.modal-form__field-checkbox--link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  .modal-form__field-checkbox--icon {
+    margin-right: 8px;
   }
 }/*# sourceMappingURL=main.css.map */

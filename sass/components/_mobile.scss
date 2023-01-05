@@ -1,16 +1,10 @@
 @media screen and (max-width: 480px) {
   .container {
     width: 480px;
-    outline: 1px solid black;
   }
   .section {
     padding-top: 60px;
     padding-bottom: 60px;
-  }
-  .header {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 15px;
   }
   .logo-link {
     font-size: 24px;
@@ -21,8 +15,18 @@
   nav {
     display: none;
   }
-  .mobile-menu__button__open,
-  .mobile-menu__button__close {
+  .mobile-menu__button__open {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    &:hover,
+    &:focus {
+      fill: getColor('main-accent-color');
+    }
+  }
+  .mobile-menu.is-open .mobile-menu__button__close {
     display: inline-flex;
     margin: 0;
     padding: 0;
@@ -129,19 +133,14 @@
     height: 100%;
   }
   .footer__flex-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
   }
   .footer-address__div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
   .footer-address-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    text-align: center;
     margin-bottom: 60px;
   }
   .footer-address-list__item:not(:last-child) {
@@ -156,9 +155,7 @@
     align-items: center;
   }
   .footer-subscribe__div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
   .footer-subscribe__form {
     display: flex;
@@ -170,5 +167,25 @@
     height: 50px;
     padding: 15px;
     margin-bottom: 20px;
+  }
+  .backdrop {
+    overflow-x: scroll;
+  }
+  .modal {
+    position: absolute;
+    width: 450px;
+    height: 609px;
+    padding: 40px;
+  }
+  .modal__p {
+    line-height: 1.5;
+  }
+  .modal-form__field-checkbox--text,
+  .modal-form__field-checkbox--link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  .modal-form__field-checkbox--icon {
+    margin-right: 8px;
   }
 }
