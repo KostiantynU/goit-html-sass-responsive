@@ -878,10 +878,9 @@ h5 {
 
 .mobile-menu__div {
   height: 100%;
-}
-
-.mobile-menu__navigation-list {
-  margin-bottom: 306px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 .mobile-menu__navigation-list-item {
