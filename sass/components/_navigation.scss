@@ -1,6 +1,7 @@
 .header {
   border-bottom: 1px solid #ececec;
   position: relative;
+  
 }
 .navigation__flex {
   display: flex;
@@ -10,11 +11,17 @@
   margin-bottom: 0px;
 }
 .navigation-list {
-  display: flex;
-  margin-left: 93px;
-  gap: 50px;
-  @include navigation-contacts;
-  color: getColor('headers-nav-color');
+  display: none;
+  @include tablet {
+    display: flex;
+    margin-left: 88px;
+    gap: 50px;
+    @include navigation-contacts;
+    color: getColor('headers-nav-color');
+  }
+  @include desktop {
+    margin-left: 93px;
+  }
 }
 .navigation-list__link {
   color: getColor('headers-nav-color');

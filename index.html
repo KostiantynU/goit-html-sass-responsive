@@ -248,7 +248,9 @@
       <section class="effective-section">
         <div class="container">
           <h1 class="effective-section__h">Ефективні рішення для вашого бізнесу</h1>
-          <button data-modal-open type="button" class="btn__all">Замовити послугу</button>
+          <button data-modal-open type="button" class="btn__all effective-btn">
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!--Особливості-->
@@ -310,38 +312,57 @@
           <ul class="our-work-list list">
             <li class="our-work-list__item">
               <div class="our-work-list-div">
-                <img
-                  src="./images/img-01.jpg"
-                  alt="Працюємо"
-                  width="370"
-                  height="294"
-                  class="img"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img-01-desk-x1.jpg 1x, ./images/img-01-desk-x2.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <img
+                    src="./images/img-01-desk-x1.jpg"
+                    alt="Працюємо"
+                    width="370"
+                    height="294"
+                    class="img"
+                  />
+                </picture>
                 <p class="our-work-list-div__p">Десктопні додатки</p>
               </div>
             </li>
-
             <li class="our-work-list__item">
               <div class="our-work-list-div">
-                <img
-                  src="./images/img-02.jpg"
-                  alt="Перевіряємо адаптації"
-                  width="370"
-                  height="294"
-                  class="img"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img-02-desk-x1.jpg 1x, ./images/img-02-desk-x2.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <img
+                    src="./images/img-02-desk-x1.jpg"
+                    alt="Перевіряємо адаптації"
+                    width="370"
+                    height="294"
+                    class="img"
+                  />
+                </picture>
+
                 <p class="our-work-list-div__p">Мобільні додатки</p>
               </div>
             </li>
             <li class="our-work-list__item">
               <div class="our-work-list-div">
-                <img
-                  src="./images/img-03.jpg"
-                  alt="Використовуємо всю палітру кольорів"
-                  width="370"
-                  height="294"
-                  class="img"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img-03-desk-x1.jpg 1x, ./images/img-03-desk-x2.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <img
+                    src="./images/img-03-desk-x1.jpg"
+                    alt="Використовуємо всю палітру кольорів"
+                    width="370"
+                    height="294"
+                    class="img"
+                  />
+                </picture>
+
                 <p class="our-work-list-div__p">Дизайнерські рішення</p>
               </div>
             </li>
@@ -354,17 +375,39 @@
           <h2 class="team-section__h">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-list__item">
-              <img
-                src="./images/our-team-01-810.jpg"
-                srcset="
-                  ./images/our-team-01-mobile-450.jpg    450w,
-                  ./images/our-team-01-mobile-x2-900.jpg 354w,
-                  ./images/our-team-01-810.jpg           270w
-                "
-                sizes="(min-width: 1200px) 270W, (min-width: 768px) 354w, (min-width: 450px) 450w, 100vw"
-                alt="Ігор Дем'яненко"
-                class="img"
-              />
+              <picture>
+                <source
+                  srcset="./images/our-team-01-desk-x1.jpg 1x, ./images/our-team-01-desk-x2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-01-tablet-x1.jpg 1x,
+                    ./images/our-team-01-tablet-x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-01-mobile-x1.jpg 1x,
+                    ./images/our-team-01-mobile-x2.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-01-mobile-x1.jpg 1x,
+                    ./images/our-team-01-mobile-x2.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <img
+                  srcset="./images/our-team-01-desk-x1.jpg 1x, ./images/our-team-01-desk-x1.jpg 2x"
+                  src="./images/our-team-01-desk-x1.jpg"
+                  alt="Ігор Дем'яненко"
+                />
+              </picture>
               <div class="team-list-box">
                 <h3 class="team-list-box__h">Ігор Дем'яненко</h3>
                 <p class="team-list-box__p">Product Designer</p>
@@ -401,17 +444,38 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/our-team-02-810.jpg"
-                srcset="
-                  ./images/our-team-02-mobile-450.jpg    450w,
-                  ./images/our-team-02-mobile-x2-900.jpg 354w,
-                  ./images/our-team-02-810.jpg           270w
-                "
-                sizes="(min-width: 1200px) 270W, (min-width: 768px) 354w, (min-width: 480px) 450w, 100vw"
-                alt="Ольга Рєпіна"
-                class="img"
-              />
+              <picture>
+                <source
+                  srcset="./images/our-team-02-desk-x1.jpg 1x, ./images/our-team-02-desk-x2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-02-tablet-x1.jpg 1x,
+                    ./images/our-team-02-tablet-x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-02-mobile-x1.jpg 1x,
+                    ./images/our-team-02-mobile-x2.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-02-mobile-x1.jpg 1x,
+                    ./images/our-team-02-mobile-x2.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  srcset="./images/our-team-02-desk-x1.jpg 1x, ./images/our-team-02-desk-x1.jpg 2x"
+                  src="./images/our-team-02-desk-x1.jpg"
+                  alt="Ольга Рєпіна"
+                />
+              </picture>
               <div class="team-list-box">
                 <h3 class="team-list-box__h">Ольга Рєпіна</h3>
                 <p class="team-list-box__p">Frontend Developer</p>
@@ -449,18 +513,38 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/our-team-03-810.jpg"
-                srcset="
-                  ./images/our-team-03-mobile-450.jpg    450w,
-                  ./images/our-team-03-mobile-x2-900.jpg 354w,
-                  ./images/our-team-03-810.jpg           270w
-                "
-                sizes="(min-width: 1200px) 270W, (min-width: 768px) 354w, (min-width: 480px) 450w, 100vw"
-                alt="Микола Тарасов"
-                class="img"
-              />
-
+              <picture>
+                <source
+                  srcset="./images/our-team-03-desk-x1.jpg 1x, ./images/our-team-03-desk-x2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-03-tablet-x1.jpg 1x,
+                    ./images/our-team-03-tablet-x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-03-mobile-x1.jpg 1x,
+                    ./images/our-team-03-mobile-x2.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-03-mobile-x1.jpg 1x,
+                    ./images/our-team-03-mobile-x2.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  srcset="./images/our-team-03-desk-x1.jpg 1x, ./images/our-team-03-desk-x1.jpg 2x"
+                  src="./images/our-team-03-desk-x1.jpg"
+                  alt="Микола Тарасов"
+                />
+              </picture>
               <div class="team-list-box">
                 <h3 class="team-list-box__h">Микола Тарасов</h3>
                 <p class="team-list-box__p">Marketing</p>
@@ -498,17 +582,38 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/our-team-04-810.jpg"
-                srcset="
-                  ./images/our-team-04-mobile-450.jpg    450w,
-                  ./images/our-team-04-mobile-x2-900.jpg 354w,
-                  ./images/our-team-04-810.jpg           270w
-                "
-                sizes="(min-width: 1200px) 270W, (min-width: 768px) 354w, (min-width: 480px) 450w, 100vw"
-                alt="Михайло Єрмаков"
-                class="img"
-              />
+              <picture>
+                <source
+                  srcset="./images/our-team-04-desk-x1.jpg 1x, ./images/our-team-04-desk-x2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-04-tablet-x1.jpg 1x,
+                    ./images/our-team-04-tablet-x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-04-mobile-x1.jpg 1x,
+                    ./images/our-team-04-mobile-x2.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-04-mobile-x1.jpg 1x,
+                    ./images/our-team-04-mobile-x2.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  srcset="./images/our-team-04-desk-x1.jpg 1x, ./images/our-team-04-desk-x1.jpg 2x"
+                  src="./images/our-team-04-desk-x1.jpg"
+                  alt="Михайло Єрмаков"
+                />
+              </picture>
               <div class="team-list-box">
                 <h3 class="team-list-box__h">Михайло Єрмаков</h3>
                 <p class="team-list-box__p">UI Designer</p>
@@ -548,7 +653,7 @@
         </div>
       </section>
       <!-- Постійні клієнти-->
-      <section class="regular-section">
+      <section class="regular-section section">
         <div class="container">
           <h2 class="regular-section__h">Постійні клієнти</h2>
           <ul class="regular-clients__list list">

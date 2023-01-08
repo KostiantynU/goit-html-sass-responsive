@@ -1,25 +1,75 @@
+.effective-section > .container {
+  padding: 118px 60px;
+
+  @include tablet {
+    .effective-section > .container {
+      padding: 118px 204px;
+    }
+  }
+  @include desktop {
+    .effective-section > .container {
+      padding: 204px 452px;
+    }
+  }
+}
 .effective-section {
   background-color: getColor('bcg-section');
-  padding: 200px 0;
+  text-align: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/bg-hero.jpg');
+    url('../images/bg-hero-mobile-x1.jpg');
+  @include retina {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg-hero-mobile-x2.jpg');
+  }
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+
+  @include tablet {
+    // margin-left: auto;
+    // margin-right: auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg-hero-tablet-x1.jpg');
+
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/bg-hero-tablet-x2.jpg');
+    }
+  }
+  @include desktop {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg-hero-desk-x1.jpg');
+
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/bg-hero-desk-x2.jpg');
+    }
+  }
 }
 .effective-section__h {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
-  width: 696px;
-  font-weight: 700;
-  font-size: 44px;
-  line-height: 1.36;
+  width: 360px;
+  margin-bottom: 30px;
+  height: 84px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: getColor('white-color');
+
+  @include desktop {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+    height: 120px;
+  }
 }
+// .effective-btn {
+//   margin-left: auto;
+//   margin-right: auto;
+// }
