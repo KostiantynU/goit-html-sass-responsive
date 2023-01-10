@@ -1212,7 +1212,7 @@ h5 {
 
 .mobile-menu {
   display: none;
-  position: absolute;
+  position: fixed;
   padding: 48px 40px;
   top: 0;
   left: 0;
