@@ -834,7 +834,14 @@ h5 {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .footer-subscribe__form__width {
+    width: 100%;
+  }
+}
+
 .footer-subscribe__email {
+  display: block;
   width: 358px;
   height: 50px;
   padding: 15px;
@@ -845,6 +852,11 @@ h5 {
   outline: none;
   background-color: transparent;
   color: #ffffff;
+}
+@media screen and (max-width: 480px) {
+  .footer-subscribe__email {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 480px) {
   .footer-subscribe__email {

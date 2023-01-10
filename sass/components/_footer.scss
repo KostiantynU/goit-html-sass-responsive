@@ -101,7 +101,13 @@
     align-items: stretch;
   }
 }
+.footer-subscribe__form__width {
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+}
 .footer-subscribe__email {
+  display: block;
   width: 358px;
   height: 50px;
   padding: 15px;
@@ -112,6 +118,9 @@
   outline: none;
   background-color: transparent;
   color: getColor('white-color');
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
   @include tel {
     width: 450px;
   }
