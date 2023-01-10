@@ -905,6 +905,11 @@ h5 {
   overflow-y: scroll;
   background-color: #ffffff;
 }
+@media screen and (max-width: 480px) {
+  .modal {
+    width: 90%;
+  }
+}
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
