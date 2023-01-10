@@ -37,10 +37,14 @@
 // }
 .features-list-div {
   background-color: getColor('features-div-color');
-  width: 450px;
-  height: 120px;
+  width: 100%;
+  height: 100%;
   // width: 270px;
   margin-bottom: 30px;
+  @include tel {
+    width: 450px;
+    height: 120px;
+  }
   @include flex-align-justify;
   @include tablet {
     width: 354px;
@@ -64,4 +68,7 @@
 .features-list-div__p {
   line-height: 1.71;
   margin-bottom: 30px;
+  @include desktop {
+    margin-bottom: 0;
+  }
 }

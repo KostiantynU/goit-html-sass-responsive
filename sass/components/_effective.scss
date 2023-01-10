@@ -1,17 +1,3 @@
-.effective-section > .container {
-  padding: 118px 60px;
-
-  @include tablet {
-    .effective-section > .container {
-      padding: 118px 204px;
-    }
-  }
-  @include desktop {
-    .effective-section > .container {
-      padding: 204px 452px;
-    }
-  }
-}
 .effective-section {
   background-color: getColor('bcg-section');
   text-align: center;
@@ -24,10 +10,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
+  padding: 118px 0px;
   @include tablet {
     // margin-left: auto;
     // margin-right: auto;
+    padding: 118px 0px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/bg-hero-tablet-x1.jpg');
 
@@ -38,6 +25,7 @@
   }
   @include desktop {
     max-width: 1600px;
+    padding: 200px 0px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -52,16 +40,19 @@
 .effective-section__h {
   margin-left: auto;
   margin-right: auto;
-  width: 360px;
+  width: 100%;
   margin-bottom: 30px;
-  height: 84px;
+  height: 100%;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: getColor('white-color');
-
+  @include tel {
+    width: 360px;
+    height: 84px;
+  }
   @include desktop {
     font-size: 44px;
     line-height: 1.36;
