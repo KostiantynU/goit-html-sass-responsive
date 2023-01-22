@@ -1,5 +1,3 @@
-/* Colors (#2f303a color for gradient ) */
-/* Fonts */
 body {
   background-color: #ffffff;
   color: #757575;
@@ -22,14 +20,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-.img-team-origin {
-  display: block;
-}
-
-.img-team-mobile {
-  display: none;
 }
 
 .container {
