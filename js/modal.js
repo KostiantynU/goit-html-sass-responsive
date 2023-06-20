@@ -10,6 +10,6 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
-    // document.body.style.overflowY = 'hidden';
+    document.body.classList.toggle('modal-is-open');
   }
 })();
