@@ -916,7 +916,7 @@ h5 {
   .modal {
     max-width: 528px;
     height: 581px;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
 }
 
