@@ -27,15 +27,15 @@
   overflow-y: scroll;
   background-color: getColor('white-color');
   @media screen and (max-width: 480px) {
-    max-width: 90%;
+    width: 90%;
     max-height: 609px;
   }
   @include tel {
-    max-width: 450px;
+    width: 450px;
     max-height: 609px;
   }
   @include desktop {
-    max-width: 528px;
+    width: 528px;
     max-height: 581px;
   }
 }
