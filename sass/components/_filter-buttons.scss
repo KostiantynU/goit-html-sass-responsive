@@ -1,14 +1,15 @@
 .filter-btn__list {
-  // display: flex;
-  display: inline-block;
-  // flex-wrap: wrap;
-  justify-content: center;
-  // margin-bottom: 40px;
-  margin-bottom: 50px;
+  display: flex;
+  // display: inline-block;
+  flex-wrap: wrap;
+
+  // justify-content: center;
+  justify-content: flex-start;
+  row-gap: 15px;
+  margin-bottom: 40px;
+  // margin-bottom: 50px;
 }
-// .filter-btn__list > .filter-btn__list-item {
-//   display: inline-block;
-// }
+
 .filter-btn__list > .filter-btn__list-item:not(:last-child) {
   margin-right: 8px;
 }
