@@ -1,1 +1,1 @@
-This is a learning project, there I learned HTML, CSS and responsive design.
+This is a learning project, where I learned HTML, CSS, and responsive design.
